@@ -9,4 +9,4 @@ extra_css:
 docs_dir: docs/
 
 nav:
-    - Sobre:
+    - Sobre: 'index.md'
