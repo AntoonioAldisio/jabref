@@ -1,6 +1,12 @@
-site_name: JabRef Developer Documentation
-repo_url: https://github.com/jabref/jabref/
+site_name: JabRef - Teste
+repo_url: https://antoonioaldisio.github.io/jabref/
 theme:
     name: readthedocs
 extra_css:
     - mkdocs-custom.css
+
+
+docs_dir: docs/
+
+nav:
+    - Sobre:
