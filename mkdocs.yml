@@ -1,10 +1,8 @@
 site_name: JabRef - Teste
 repo_url: https://antoonioaldisio.github.io/jabref/
 theme:
-    name: readthedocs
-extra_css:
-    - mkdocs-custom.css
-
+  name: material
+  language: pt
 
 docs_dir: docs/
 
