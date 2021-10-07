@@ -142,5 +142,22 @@ public class PdfAnnotationImporterTest {
         assertEquals(Collections.singletonList(expected),
                 importer.importAnnotations(Path.of("src/test/resources/pdfs/minimal-polygon.pdf")));
     }
+
+    // Teste proposto por Antônio Aldisio
+    // Verificar se abre arquivo TXT
+    @Test
+    public void invalidDocumentTypeTXT() {
+        assertEquals(Collections.emptyList(), importer.importAnnotations(Path.of("src/test/resources/pdfs/teste.txt")));
+    }
+    // Verificar se ele consegue ler alguma Emoji
+    @Test
+    public void highlightMinimalFoxitEMOJ() {
+        final FileAnnotation expectedLinkedAnnotation = new FileAnnotation("lynyus", LocalDateTime.of(2017, 5, 31, 15, 16, 1), 1,
+                "😂, 😃, 🧘🏻‍♂️, 🌍, 🍞, 🚗, 📞, 🎉, ❤️, 🍆", FileAnnotationType.HIGHLIGHT, Optional.empty());
+        final FileAnnotation expected = new FileAnnotation("lynyus", LocalDateTime.of(2017, 5, 31, 15, 16, 1), 1,
+                "Hello", FileAnnotationType.HIGHLIGHT, Optional.of(expectedLinkedAnnotation));
+        assertEquals(Collections.singletonList(expected),
+                importer.importAnnotations(Path.of("src/test/resources/pdfs/minimal-emoji.pdf")));
+    }
 }
 
