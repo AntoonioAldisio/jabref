@@ -8,3 +8,7 @@ docs_dir: docs/
 
 nav:
     - Sobre: 'index.md'
+    - Configuraçōes: 'conf.md'
+    - Testes Unidade:
+      - Teste de unidade do JabRef: 'v01.md'
+      - Testes de unidade da classe PdfAnnotationImporter: 'v02.md'
